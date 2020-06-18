@@ -1,6 +1,3 @@
-
-
-
 //Criar um programa que calcula a média
 //das notas entre os alunos e envia 
 //mensagens do cálculo da média
