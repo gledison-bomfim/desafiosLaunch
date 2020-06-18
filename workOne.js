@@ -8,7 +8,7 @@ const peso = 92;
 const altura = 1.75;
 const sexo = "Masculino";
 
-calculo
+//calculo
 imc = peso / ( altura * altura )
 
 if (imc >= 30){
