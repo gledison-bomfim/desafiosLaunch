@@ -1,7 +1,7 @@
 
 //Crie um programa que armazena dados da empresa
  //Rocketseat dentro de um objeto chamado empresa. 
- //Os dados a serem armazenados são:
+ //Os dados a serem armazenados são:  
 
  const usuario = {
     nome: "Diego",   
