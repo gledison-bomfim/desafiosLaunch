@@ -15,8 +15,5 @@
        }
    }
    }
-   
-   
-   
-   
+       
    console.log(`A empresa ${usuario.empresa.nome} esta localizada em ${usuario.empresa.endereco.rua}, ${usuario.empresa.endereco.numero}`)
