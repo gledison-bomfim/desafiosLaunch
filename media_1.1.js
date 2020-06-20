@@ -35,7 +35,7 @@ const alunosTurmaB = [
 
     {
         nome : "Lisiane",
-        nota:  9.0
+        nota:  1.0
     }
 ]
 
@@ -47,15 +47,15 @@ const media1 = calculoMedia(alunosTurmaA);
 const media2 = calculoMedia(alunosTurmaB);
 
 
-function enviaMensagem(media){
-    //Se a média for maior que parabenizar os alunos
-if(media > 5){
-    console.log(`a nota de vocês foi ${media} Não são tão burros assim, ufa`)
-}else {
-    console.log(`Seus burros, a nota de vocês foi ${media}.`)
-}
+function enviaMensagem(media, turma){
+        //Se a média for maior que parabenizar os alunos
+    if(media > 5){
+        console.log(`A media da ${turma} foi de media ${media}, ufa`)
+    }else {
+        console.log(`Seus burros, a media da turma foi ${turma}`)
+    }
 
 }
 
-enviaMensagem (media1);
-enviaMensagem (media2);
+enviaMensagem (media1, 'turmaA' );
+enviaMensagem (media2), 'turmaB';
