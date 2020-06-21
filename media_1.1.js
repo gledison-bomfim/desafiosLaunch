@@ -11,7 +11,7 @@ const alunosTurmaA = [
 
     {
         nome : "Darlan",
-        nota:  8.0
+        nota:  1.0
     },
 
 
@@ -20,7 +20,7 @@ const alunosTurmaA = [
         nota:  9.0
     },
     {
-        nome : "Mails um Aluno",
+        nome : "n sei",
         nota:  2.0
     }
 ]
@@ -78,3 +78,35 @@ if(media > 5){
 
 enviaMensagem (media1, 'turmaA' );
 enviaMensagem (media2, 'turmaB' );
+
+//MArcar aluno como reprovado se nota menor que 5
+//enviar uma mensagem
+
+
+
+function marcarComoreprovado(aluno){
+    aluno.reprovado = false;
+        if (aluno.nota <5 ){
+            aluno.reprovado = true
+        }
+    
+}
+
+//console.table(alunos) exibe em tabelas
+
+
+function enviarMensagemReprovado(aluno){
+    if (aluno.reprovado){
+        console.log(`O aluno ${aluno.nome} está reprovado!`)
+    }
+}
+
+function alunoReprovado(alunos){
+    for (let aluno of alunos){
+        marcarComoreprovado(aluno);
+        enviarMensagemReprovado(aluno)
+    }
+}
+
+alunoReprovado(alunosTurmaA);
+alunoReprovado(alunosTurmaB);
