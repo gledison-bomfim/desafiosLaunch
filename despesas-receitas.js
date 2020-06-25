@@ -1,54 +1,45 @@
-
-
-
-
-const users = [
+const usuarios = [
     {
-        nome: "Glédison",
-        receitas: [10, 150, 2300],
-        despesas: [10, 150, 3000]
+      nome: "Salvio",
+      receitas: [115.3, 48.7, 98.3, 14.5],
+      despesas: [85.3, 13.5, 19.9]
     },
     {
-        nome: "Darlan",
-        receitas: [2300, 2500],
-        despesas: [500, 500]
+      nome: "Marcio",
+      receitas: [24.6, 214.3, 45.3],
+      despesas: [185.3, 12.1, 120.0]
     },
     {
-        nome: "Alex",
-        receitas: [600],
-        despesas: [800]
-    },
-    
-];
+      nome: "Lucia",
+      receitas: [9.8, 120.3, 340.2, 45.3],
+      despesas: [450.2, 29.9]
+    }
+  ];
 
-function calculaSaldo(receitas, despesas){
+  function calculaSaldo(receitas, despesas) {
     const somaReceitas = somaNumeros(receitas)
     const somaDespesas = somaNumeros(despesas)
 
     return somaReceitas - somaDespesas
-}
 
-function somaNumeros (numeros){
-    let soma = 0
+  }
 
-    for (let numero of numeros ){
+  function somaNumeros(numeros) {
+    let soma =0;
+
+    for (let numero of numeros){
         soma = soma + numero
     }
     return soma
-}
+  }
 
-for (let user of users){
-    const saldo = calculaSaldo(user.receitas, user.despesas)
-
-    if (saldo > 0){
-        console.log(`${user.nome} possui saldo POSITIVO de ${saldo.toFixed(2)}`)
+  for (let usuario of usuarios){
+      const saldo = calculaSaldo(usuario.receitas, usuario.despesas)
+    if(saldo > 0){
+        situacao = 'POSITIVO'
     }else{
-        console.log(`${user.nome} possui saldo NEGATIVO de ${saldo.toFixed(2)}`)
+        situacao = 'NEGATIVO'
     }
-}
 
-
-
-
-
-
+    console.log(`${usuario.nome} possui saldo ${situacao} de ${saldo.toFixed(2)}`)
+  }
